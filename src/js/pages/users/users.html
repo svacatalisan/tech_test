@@ -1,0 +1,33 @@
+<article class="users-management">
+    <section class="main-section container-fluid col-md-6 col-xs-12">
+        <h1>ADD USERS</h1>
+        <section style="overflow-x: auto;">
+            <table class="col-xs-12">
+                <tbody>
+                    <tr ng-model="vm.usersList" add-user></tr>
+                </tbody>
+            </table>
+        </section>
+    </section>
+    <section class="main-section container-fluid col-md-6 col-xs-12">
+        <h1>LIST USERS</h1>
+        <section style="overflow-x: auto;">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Avatar</th>
+                        <th>Edit</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="user in vm.usersList" ng-model="user" view-edit-user></tr>
+                </tbody>
+            </table>
+        </section>
+    </section>
+</article>

@@ -1,0 +1,51 @@
+.main-container {
+	font-family: $font-familly-lato;
+	margin: 0 24px;
+
+	.heading {
+		color: $heading-color;
+		font-size: $main-heading-font-size;
+		~ * {
+			margin-top: 30px;
+		}
+	}
+
+	.intro_content, .date{
+		color:#666;
+		font-family: verdana;
+		font-size: 16px;
+		font-weight: 900;
+	}
+
+	.paragraphs {
+		*:not(:last-child) {
+			margin-bottom: 20px;
+		}
+		.heading {
+			font-size: $secondary-heading-font-size;
+		}
+		.content, .content_main {
+			padding-left:30px;
+			p.content, p.content_main {
+				@include before-item-list-symbol($bullet-char);
+			}
+		}
+
+		.subcontent {
+			padding-left: 40px;
+			p.subcontent {
+				@include before-item-list-symbol($empty-bullet-char);
+			}
+		}
+
+		@media (max-width: 480px) {
+			.content, .content_main {
+				padding-left:15px;
+			}
+	
+			.subcontent {
+				padding-left:20px;
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+
+.btn-edit::before {
+    content: $edit-text;
+}
+.btn-cancel::before {
+    content: $cancel-text;
+}
+.btn-update::before {
+    content: $update-text;
+}
+.btn-delete::before {
+    content: $delete-text;
+}
+
+ @media (max-width: 480px) {
+    .user-form {
+        display: flex;
+        flex-direction: column;
+        td:not(:last-child) {
+            table {
+                margin-bottom: 0;
+            }
+        }
+    }
+    [class*=btn-] {
+        font-family: FontAwesome;
+    }
+    .btn-edit::before {
+        content: $edit-icon;
+    }
+    .btn-cancel::before {
+        content: $cancel-icon;
+    }
+    .btn-update::before {
+        content: $update-icon;
+    }
+    .btn-delete::before {
+        content: $delete-icon;
+    }
+}

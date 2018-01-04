@@ -1,0 +1,33 @@
+{
+  "name": "raremark_tech_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/js/index.js",
+  "scripts": {
+    "build": "webpack -p",
+    "start": "webpack-dev-server"
+  },
+  "author": "Alex Andrei Catalisan",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^0.26.1",
+    "eslint": "^3.16.0",
+    "eslint-config-angular": "^0.5.0",
+    "eslint-loader": "^1.6.3",
+    "eslint-plugin-angular": "^1.6.1",
+    "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "file-loader": "^0.10.0",
+    "ng-annotate-loader": "^0.2.0",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^6.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.7.0",
+    "webpack-dev-server": "^2.4.1",
+    "webpack-uglify-js-plugin": "^1.1.9"
+  },
+  "dependencies": {
+    "@angular/http": "^5.1.1",
+    "angular": "^1.5.X",
+    "angular-ui-router": "^0.4.2"
+  }
+}

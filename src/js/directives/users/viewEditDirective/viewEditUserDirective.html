@@ -1,0 +1,32 @@
+<tr>
+	<th scope="row" >{{user.id}}</th>
+	<td>
+		<span ng-show="!editMode">{{user.first_name}}</span>
+		<input ng-model="localUser.first_name" type="text" ng-show="editMode"/>
+	</td>
+	<td>
+		<span ng-show="!editMode">{{user.last_name}}</span>
+		<input ng-model="localUser.last_name" type="text" ng-show="editMode"/>
+	</td>
+	<td ng-show="!editMode">
+		<img src={{user.avatar}} class="img-responsive" ng-show="user.avatar"/>
+		<p ng-show="!user.avatar">No avatar</p>
+	</td>
+	<td ng-show="editMode">
+		<img ng-src="{{localUser.avatar}}" class="img-responsive" ng-show="localUser.avatar" />
+		<label class="btn btn-primary">
+			<input class="import-image" style="display: none;" ng-model="localUser.avatar" accept="image/*" ng-file-select type="file" />
+			Browse
+		</label>
+	</td>
+	<td>
+		<button class="btn btn-primary btn-edit" ng-show="!editMode" ng-click="toggleEditMode()"></button>
+		<button class="btn btn-primary btn-cancel" ng-show="editMode" ng-click="toggleEditMode()"></button>
+	</td>
+	<td>
+		<button class="btn btn-primary btn-update" ng-disabled="!isEditModeOn()" ng-click="updateUser()"></button>
+	</td>
+	<td>
+		<button class="btn btn-danger btn-delete" ng-disabled="isEditModeOn()" ng-click="deleteUser()"></button>
+	</td>
+</tr>

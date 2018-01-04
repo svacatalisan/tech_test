@@ -1,0 +1,16 @@
+{    
+    "extends": ["eslint:recommended", "angular"],
+    "plugins": [],
+    "parserOptions": {
+        "ecmaVersion": 6
+    },
+    "env": {
+        "browser": true,
+        "node": true,
+        "commonjs": true
+    },
+    "globals": {},
+    "rules": {
+        "angular/di": 0
+    }
+}

@@ -1,0 +1,7 @@
+@mixin before-item-list-symbol($symbol) {
+    &::before {
+        content: $symbol;
+        margin-left: -20px;
+        margin-right: 10px;
+    };
+}

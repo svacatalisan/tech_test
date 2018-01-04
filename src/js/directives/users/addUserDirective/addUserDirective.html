@@ -1,0 +1,62 @@
+<tr class="user-form">
+	<td>
+		<table class="table table-bordered table-hover table-striped">
+			<thead>
+				<th>First Name</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<input class="input-field" ng-model="user.firstName" type="text" required />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</td>
+	<td>
+		<table class="table table-bordered table-hover table-striped">
+			<thead>
+				<th>Last Name</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<input class="input-field" ng-model="user.lastName" type="text" required />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</td>
+	<td>
+		<table class="table table-bordered table-hover table-striped">
+			<thead>
+				<th>Avatar</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<img ng-src="{{user.avatar}}" class="img-responsive" ng-show="user.avatar" />
+						<label class="btn btn-primary">
+							<input class="add-import-image" style="display: none;" accept="image/*" ng-model="user.avatar" accept="image/*" ng-file-select type="file" />
+							Browse
+						</label>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</td>
+	<td>
+		<table class="table table-bordered table-hover table-striped">
+			<thead>
+				<th>Add</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<button class="btn btn-default" ng-click="createUser()">Add User</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</td>
+</tr>
